@@ -1,0 +1,123 @@
+/* Variables de color */
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #28A745;
+    --background-light: #FFFFFF;
+    --text-light: #333333;
+    --background-dark: #121212;
+    --text-dark: #FFFFFF;
+}
+
+[data-theme="dark"] {
+    --bg-color: var(--background-dark);
+    --text-color: var(--text-dark);
+}
+
+[data-theme="light"] {
+    --bg-color: var(--background-light);
+    --text-color: var(--text-light);
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.input-area, .output-area {
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s;
+}
+
+.input-area:hover, .output-area:hover {
+    transform: translateY(-4px);
+}
+
+.input-area input[type="file"] {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.output-area button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.output-area button:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+.history-sidebar {
+    width: 25%;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.history-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.history-sidebar li {
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.history-sidebar li:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
