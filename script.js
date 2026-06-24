@@ -84,13 +84,32 @@ function updateHistoryUI() {
     history.forEach((entry, index) => {
         const listItem = document.createElement('li');
         listItem.textContent = `Entry ${index + 1} - ${new Date(entry.date).toLocaleString()}`;
-        listItem.addEventListener('click', () => {
+        
+        // View button
+        const viewButton = document.createElement('button');
+        viewButton.textContent = 'View';
+        viewButton.classList.add('view-button');
+        viewButton.addEventListener('click', () => {
             originalImage.src = entry.original;
             compressedImage.src = entry.compressed;
             originalImage.classList.remove('hidden');
             compressedImage.classList.remove('hidden');
             exportButton.classList.remove('hidden');
         });
+        
+        // Export button
+        const exportHistoryButton = document.createElement('button');
+        exportHistoryButton.textContent = 'Export';
+        exportHistoryButton.classList.add('export-button');
+        exportHistoryButton.addEventListener('click', () => {
+            const link = document.createElement('a');
+            link.href = entry.compressed;
+            link.download = `compressed-image-${index + 1}.jpg`;
+            link.click();
+        });
+        
+        listItem.appendChild(viewButton);
+        listItem.appendChild(exportHistoryButton);
         historyList.appendChild(listItem);
     });
 }

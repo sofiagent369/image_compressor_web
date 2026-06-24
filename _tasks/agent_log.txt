@@ -17,3 +17,5 @@
 [2026-06-24 03:03:13] [IN_PROGRESS] task_003: Implementar lógica de compresión en JavaScript
 [2026-06-24 03:06:50] [COMPLETED] task_003: Implementar lógica de compresión en JavaScript
 [2026-06-24 03:06:52] [IN_PROGRESS] task_004: Guardar historial en localStorage
+[2026-06-24 03:11:12] [COMPLETED] task_004: Guardar historial en localStorage
+[2026-06-24 03:11:15] [IN_PROGRESS] task_005: Mostrar historial de uso en sidebar
