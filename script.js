@@ -31,9 +31,15 @@ function compressImage(quality) {
             canvas.width = img.width;
             canvas.height = img.height;
             ctx.drawImage(img, 0, 0);
-            canvas.toBlob((blob) => {
-                resolve(blob);
-            }, 'image/jpeg', quality / 100);
+            if (currentFile.type === 'image/jpeg') {
+                canvas.toBlob((blob) => {
+                    resolve(blob);
+                }, 'image/jpeg', quality / 100);
+            } else {
+                canvas.toBlob((blob) => {
+                    resolve(blob);
+                }, 'image/png');
+            }
         };
         img.onerror = reject;
     });
@@ -47,6 +53,16 @@ compressionSlider.addEventListener('input', async (event) => {
         compressedImage.src = URL.createObjectURL(blob);
         compressedImage.classList.remove('hidden');
         exportButton.classList.remove('hidden');
+    }
+});
+
+// Function to export the compressed image
+exportButton.addEventListener('click', () => {
+    if (compressedImage.src) {
+        const link = document.createElement('a');
+        link.href = compressedImage.src;
+        link.download = 'compressed-image.' + currentFile.type.split('/')[1];
+        link.click();
     }
 });
 
