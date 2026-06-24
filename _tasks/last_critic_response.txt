@@ -1,0 +1,45 @@
+### Resumen de Errores y Problemas Encontrados:
+
+1. **Imports Faltantes**:
+   - El archivo `script.js` hace referencia a variables (`imageInput`, `originalImage`) que no están definidas en ese archivo.
+   
+2. **Rutas Incorrectas entre Archivos**:
+   - No se encuentran problemas con las rutas de archivos en el proyecto.
+
+3. **Variables No Definidas**:
+   - En `script.js`, las variables `imageInput` y `originalImage` no están definidas.
+
+4. **Archivos Referenciados pero No Creados**:
+   - El archivo `project.json` está referenciado en `README.md`, pero no se utiliza directamente en el código, por lo que no es un problema crítico.
+
+### Soluciones Implementadas:
+
+1. **Definición de Variables en `script.js`**:
+   - Se definen las variables `imageInput` y `originalImage` para que el evento de carga del archivo funcione correctamente.
+
+```javascript
+// script.js
+const imageInput = document.getElementById('image-input');
+const originalImage = document.getElementById('original-image');
+let currentFile = null;
+
+const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+
+imageInput.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    if (file && file.type.startsWith('image/')) {
+        if (file.size > MAX_FILE_SIZE) {
+            alert('File size exceeds the limit. Please upload an image smaller than 5MB.');
+            return;
+        }
+        currentFile = file;
+        originalImage.src = URL.createObjectURL(file);
+        originalImage.classList.remove('hidden');
+    }
+});
+
+// ... (resto del código)
+```
+
+### Conclusión:
+Los problemas principales encontrados han sido la falta de definición de variables en `script.js`. Se han corregido estos errores para asegurar que el funcionamiento básico de la aplicación no se vea afectado.
