@@ -1,0 +1,16 @@
+{
+  "name": "image_compressor_web",
+  "display_name": "image_compressor_web",
+  "description": "Aplicación web de compresor de imágenes online con interfaz moderna tipo dashboard, incluyendo input/output areas, historial de uso guardado en localStorage, exportar resultados como archivo y tema claro/oscuro.",
+  "tech_stack": [
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "created_at": "2026-06-24T02:57:59.785196",
+  "created_by": "Bot_Ant Multi-Agent System",
+  "version": "1.0.0",
+  "status": "in_development",
+  "portable": true,
+  "notes": "Este proyecto es portable. Puedes mover la carpeta completa a otro equipo."
+}

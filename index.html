@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Compressor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Image Compressor</h1>
+        <button id="theme-toggle">Toggle Theme</button>
+    </header>
+
+    <main>
+        <section class="input-area">
+            <h2>Upload Image</h2>
+            <input type="file" id="image-input" accept="image/*">
+            <img src="" alt="Original Image" id="original-image" class="hidden">
+        </section>
+
+        <section class="output-area">
+            <h2>Compressed Image</h2>
+            <img src="" alt="Compressed Image" id="compressed-image" class="hidden">
+            <button id="compress-button">Compress</button>
+            <button id="export-button" class="hidden">Export</button>
+        </section>
+    </main>
+
+    <aside class="history-sidebar">
+        <h2>History</h2>
+        <ul id="history-list"></ul>
+    </aside>
+
+    <footer>
+        <p>&copy; 2023 Image Compressor. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

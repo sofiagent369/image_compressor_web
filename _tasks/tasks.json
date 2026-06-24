@@ -1,0 +1,193 @@
+{
+  "tasks": [
+    {
+      "id": "task_001",
+      "title": "Crear estructura HTML",
+      "description": "Crear index.html con layout de la aplicación: header, main area (input/output), sidebar para historial, footer. Incluir elementos como input file, display de imagen original y comprimida, botones de acción.",
+      "assigned_to": "frontend_expert",
+      "status": "in_progress",
+      "priority": 1,
+      "dependencies": [],
+      "output_files": [],
+      "output_summary": "",
+      "created_at": "2026-06-24T02:57:59.785196",
+      "started_at": "2026-06-24T02:58:00.949034",
+      "completed_at": null
+    },
+    {
+      "id": "task_002",
+      "title": "Diseñar estilos CSS",
+      "description": "Crear styles.css con diseño moderno: dashboard layout, tema claro/oscuro toggle, responsive design para diferentes tamaños de pantalla. Incluir estilos para header, main area, sidebar y footer.",
+      "assigned_to": "ui_expert",
+      "status": "pending",
+      "priority": 2,
+      "dependencies": [
+        "task_001"
+      ],
+      "output_files": [],
+      "output_summary": "",
+      "created_at": "2026-06-24T02:57:59.800930",
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "task_003",
+      "title": "Implementar lógica de compresión en JavaScript",
+      "description": "Crear script.js con funcionalidad para leer, comprimir y mostrar imágenes. Utilizar la API Canvas para manejar la imagen y reducir su tamaño.",
+      "assigned_to": "frontend_expert",
+      "status": "pending",
+      "priority": 2,
+      "dependencies": [
+        "task_001"
+      ],
+      "output_files": [],
+      "output_summary": "",
+      "created_at": "2026-06-24T02:57:59.800930",
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "task_004",
+      "title": "Guardar historial en localStorage",
+      "description": "En script.js, implementar la funcionalidad para guardar el historial de imágenes comprimidas en localStorage. Incluir métodos para almacenar y recuperar datos.",
+      "assigned_to": "frontend_expert",
+      "status": "pending",
+      "priority": 3,
+      "dependencies": [
+        "task_001",
+        "task_003"
+      ],
+      "output_files": [],
+      "output_summary": "",
+      "created_at": "2026-06-24T02:57:59.816609",
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "task_005",
+      "title": "Mostrar historial de uso en sidebar",
+      "description": "Modificar index.html y script.js para mostrar el historial de imágenes comprimidas en la sidebar. Incluir botones para ver y exportar las imágenes guardadas.",
+      "assigned_to": "frontend_expert",
+      "status": "pending",
+      "priority": 3,
+      "dependencies": [
+        "task_001",
+        "task_003"
+      ],
+      "output_files": [],
+      "output_summary": "",
+      "created_at": "2026-06-24T02:57:59.816609",
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "task_006",
+      "title": "Implementar tema claro/oscuro",
+      "description": "En styles.css y script.js, implementar la funcionalidad para cambiar entre temas claro y oscuro. Utilizar variables CSS y botón en el header.",
+      "assigned_to": "ui_expert",
+      "status": "pending",
+      "priority": 3,
+      "dependencies": [
+        "task_002"
+      ],
+      "output_files": [],
+      "output_summary": "",
+      "created_at": "2026-06-24T02:57:59.832318",
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "task_007",
+      "title": "Exportar resultados como archivo",
+      "description": "En script.js, implementar la funcionalidad para exportar la imagen comprimida como archivo. Utilizar el método download del elemento a y Blob.",
+      "assigned_to": "frontend_expert",
+      "status": "pending",
+      "priority": 4,
+      "dependencies": [
+        "task_001",
+        "task_003"
+      ],
+      "output_files": [],
+      "output_summary": "",
+      "created_at": "2026-06-24T02:57:59.832318",
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "task_008",
+      "title": "Añadir funcionalidad de preview en tiempo real",
+      "description": "En script.js, implementar la funcionalidad para mostrar una vista previa de la imagen comprimida en tiempo real. Actualizar el display dinámicamente al cambiar los parámetros de compresión.",
+      "assigned_to": "frontend_expert",
+      "status": "pending",
+      "priority": 4,
+      "dependencies": [
+        "task_001",
+        "task_003"
+      ],
+      "output_files": [],
+      "output_summary": "",
+      "created_at": "2026-06-24T02:57:59.848352",
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "task_009",
+      "title": "Optimizar imágenes de alta calidad",
+      "description": "En script.js, implementar la funcionalidad para manejar imágenes de alta calidad y asegurar que se comprimen correctamente sin pérdida significativa de calidad.",
+      "assigned_to": "frontend_expert",
+      "status": "pending",
+      "priority": 4,
+      "dependencies": [
+        "task_001",
+        "task_003"
+      ],
+      "output_files": [],
+      "output_summary": "",
+      "created_at": "2026-06-24T02:57:59.848352",
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "task_010",
+      "title": "Validar tamaños de archivo",
+      "description": "En script.js, implementar la funcionalidad para validar el tamaño del archivo de imagen antes de la compresión y mostrar mensajes al usuario si el archivo es demasiado grande.",
+      "assigned_to": "frontend_expert",
+      "status": "pending",
+      "priority": 5,
+      "dependencies": [
+        "task_001",
+        "task_003"
+      ],
+      "output_files": [],
+      "output_summary": "",
+      "created_at": "2026-06-24T02:57:59.864054",
+      "started_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "task_011",
+      "title": "README",
+      "description": "Crear README.md con descripción del proyecto, características principales, screenshot placeholder, instrucciones de uso y créditos.",
+      "assigned_to": "writer_agent",
+      "status": "pending",
+      "priority": 6,
+      "dependencies": [
+        "task_001",
+        "task_002",
+        "task_003",
+        "task_004",
+        "task_005",
+        "task_006",
+        "task_007",
+        "task_008",
+        "task_009"
+      ],
+      "output_files": [],
+      "output_summary": "",
+      "created_at": "2026-06-24T02:57:59.864054",
+      "started_at": null,
+      "completed_at": null
+    }
+  ],
+  "updated_at": "2026-06-24T02:58:00.949034"
+}
