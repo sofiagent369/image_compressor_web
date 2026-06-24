@@ -23,3 +23,5 @@
 [2026-06-24 03:17:46] [IN_PROGRESS] task_006: Implementar tema claro/oscuro
 [2026-06-24 03:26:56] [COMPLETED] task_006: Implementar tema claro/oscuro
 [2026-06-24 03:26:58] [IN_PROGRESS] task_007: Exportar resultados como archivo
+[2026-06-24 03:28:45] [COMPLETED] task_007: Exportar resultados como archivo
+[2026-06-24 03:28:48] [IN_PROGRESS] task_008: Añadir funcionalidad de preview en tiempo real
