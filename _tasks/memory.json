@@ -15,6 +15,10 @@
     {
       "content": "Agente ⚛️ Experto Frontend completó: Guardar historial en localStorage. Archivos: script.js",
       "timestamp": "2026-06-24T03:11:12.733489"
+    },
+    {
+      "content": "Agente ⚛️ Experto Frontend completó: Mostrar historial de uso en sidebar. Archivos: index.html, script.js",
+      "timestamp": "2026-06-24T03:17:44.008346"
     }
   ],
   "decisions": [],
@@ -27,7 +31,9 @@
       "script.js"
     ],
     "ui_expert": [
-      "styles.css"
+      "styles.css",
+      "styles.css",
+      "script.js"
     ]
   }
 }
